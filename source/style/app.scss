@@ -355,7 +355,7 @@ input::-ms-clear {
 }
 @media screen and (max-width: 767px){
   .container {
-    width: 640px;
+    max-width: 479px;
   }
   .title {
     font-size: 28px;
@@ -366,7 +366,7 @@ input::-ms-clear {
 }
 @media screen and (max-width: 479px){
   .container {
-    width: 480px;
+    width: 320px;
   }
   .block {
     padding: 25px 0;
