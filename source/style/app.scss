@@ -70,7 +70,9 @@ input::-ms-clear {
 .green {
   color: #1a988c;
 }
-
+.red {
+  color: $text-red;
+}
 .form {
   width: 270px;
   text-align: center;
