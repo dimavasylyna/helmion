@@ -33,6 +33,7 @@
 		display: flex;
 		align-items: center;
 		position: relative;
+		cursor: pointer;
 		&:nth-of-type(1) {
 			margin-top: 54px;
 		}
@@ -58,6 +59,14 @@
 			left: 5px;
 			bottom: -21px;
 		}
+		&:hover {
+			.harmful__item-img {
+				box-shadow: 0 0 0 3px #fa7070;	
+			}
+			.harmful__mark {
+				display: block;
+			}
+		}
 	}
 	&__img {
 		border: 10px solid #fff;
@@ -66,6 +75,8 @@
 		margin-right: 31px;
 		img {
 			display: block;
+			max-width: 630px;
+			height: auto;
 		}
 	}
 	&__list-1 {
@@ -113,43 +124,162 @@
 		border-radius: 50%;
 		position: relative;
 		top: 2px;
+		z-index: 5;
 		img {
 			position: absolute;
 			left: 50%;
 			top: 50%;
 			transform: translateX(-50%) translateY(-50%);
+			
+		}
+	}
+	&__mark-inner {
+		position: absolute;
+		height: 14px;
+		width: 14px;
+		left: 50%;
+		top: 50%;
+		transform: translateX(-50%) translateY(-50%);
+		background-color: transparent;
+		border-radius: 50%;
+		box-sizing: content-box;
+		border: 5px solid #fff;
+		z-index: 1;
+		
+	}
+	&__mark {
+		position: absolute;
+		height: 14px;
+		width: 14px;
+		background-color: #fa7070;
+		border-radius: 50%;
+		z-index: 0;
+		cursor: default;
+		display: none;
+		&::before,
+		&::after {
+			content: '';
+			display: block;
+			position: absolute;
+			height: 1px;
+			background-color: #fa7070;
+		}
+		&::after {
+			transform-origin: 100% 50%;
+			right: 5px;
+			top: 5px;
+			z-index: -1;
 		}
 	}
 	&-dishes {
 		img {
 			left: 20px;
 		}
+		.harmful__mark {
+			right: -354px;
+    		top: 158px;
+    		&::before {
+    			width: 88px;
+			    left: -347px;
+    			top: -115px;
+    		}
+    		&::after {
+    			width: 294px;
+    			transform: rotate(24deg);
+    		}
+		}
 	}
 	&-hands {
 		img {
 			left: 62px;
+		}
+		.harmful__mark {
+			right: -259px;
+    		top: 10px;
+    		&::before {
+    			width: 88px;
+			    left: -254px;
+    			top: 32px;
+    		}
+    		&::after {
+    			width: 177px;
+    			transform: rotate(-9deg);
+    		}
 		}
 	}
 	&-shoes {
 		img {
 			left: 38px;
 		}
+		.harmful__mark {
+			right: -283px;
+    		top: 77px;
+    		&::before {
+    			width: 88px;
+		        left: -273px;
+    			top: -30px;
+    		}
+    		&::after {
+    			width: 199px;
+    			transform: rotate(10deg);
+    		}
+		}
 	}
 	&-air {
 		img {
 			left: 43px;
+		}
+		.harmful__mark {
+			right: 586px;
+    		top: -16px;
+    		&::before {
+    			width: 88px;
+	            right: -385px;
+    			top: 56px;
+    		}
+    		&::after {
+    			width: 307px;
+    			transform: rotate(189.6deg);
+    		}
 		}
 	}
 	&-water {
 		img {
 			left: 65px;
 		}
+		.harmful__mark {
+			right: 337px;
+    		top: -26px;
+    		&::before {
+    			width: 88px;
+                right: -140px;
+    			top: 66px;
+    		}
+    		&::after {
+    			width: 85px;
+    			transform: rotate(226.6deg);
+    		}
+		}
 	}
 	&-food {
 		img {
 			left: 49px;
 		}
+		.harmful__mark {
+		    right: 516px;
+   			 top: -74px;
+   			 &::before {
+    			width: 88px;
+                right: -314px;
+    			top: 116px;
+    		}
+    		&::after {
+    			width: 255px;
+    			transform: rotate(205.6deg);
+    		}
+		}
 	}
+
 	&__so {
 		text-align: center;
 		font-size: 25px;
