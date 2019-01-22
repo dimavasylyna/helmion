@@ -8,6 +8,7 @@
     &__list {
 		margin-top: 42px;
 		width: 1200px;
+		margin-left: -13px;
     }
     .slick-list {
 		width: 1200px;
@@ -22,6 +23,7 @@
     	padding-top: 120px;
     	position: relative;
     	width: 370px;
+    	box-shadow: 0 0 15px rgba(36, 66, 137, 0.1);
     }
     &__comparison {
     	display: flex;
@@ -91,6 +93,19 @@
 		position: relative;
 		z-index: 0;
     }
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+	&__logo {
+		height: 69px;
+	}
+	&__comparison {
+		.reviews__img {
+			right: 59px;
+			&:first-of-type.reviews__img {
+				left: 27px;
+			}
+		}
+	}
+}
     &__body {
     	height: 340px;
     	overflow: hidden;
@@ -108,7 +123,7 @@
     }
     &__text {
     	font-size: 18px;
-    	line-height: 1.6;
+    	line-height: 1.56;
     	margin-top: 10px;
     	padding: 0 22px;
     }
@@ -125,6 +140,7 @@
     	bottom: -19px;
     	left: 50%;
     	transform: translateX(-50%);
+    	transition: 0.2s;
     	&::before,
     	&::after {
     		content: '';
@@ -142,6 +158,8 @@
     		transform: translateX(-50%) translateY(-50%) rotate(90deg);
     	}
     	&.open {
+    		background-color: #fdd110;
+			transition: 0.2s;
     		&::before,
     		&::after {
     			background-color: #000;
@@ -158,11 +176,11 @@
         height: 24px;
         background: url('../img/symptoms-arrow.svg') 0 0 no-repeat;
         transition: .2s;
-
+        z-index: 10;
     }
 
     .slick-next {
-        right: -44px;
+        right: -50px;
 		top: 327px;
         &::before {
             font-size: 0;
@@ -218,6 +236,7 @@
 		width: 24px;
 		height: 24px;
 		transition: 0.2s;
+		box-shadow: 0 0 15px rgba(36, 66, 137, 0.1);
     }
     .slick-dots .slick-active button::after {
     	transition: 0.4s;
@@ -225,15 +244,200 @@
     	height: 14px;
     }
 }
+@media screen and (max-width: 1350px){
+	.reviews {
+		&__list {
+			
+		}
+		.slick-next {
+	        right: 31px;
+			top: 209px;
+    	}
+
+	    .slick-prev {
+	        left: 31px;
+	        transform: rotate(180deg);
+			top: 197px;
+	    }
+	}
+}
+@media screen and (max-width: 1210px){
+	.reviews {
+		&__list {
+			width: 1170px;
+			margin-left: auto;
+			margin-right: auto;
+		}
+		.slick-list {
+			width: 1170px;
+		}
+	}
+}
 @media screen and (max-width: 1190px){
-  
+  .reviews {
+	&__list {
+		width: 910px;
+	}
+	.slick-list {
+		width: 910px;
+	}
+	&__item {
+		margin-left: 6px;
+		margin-right: 6px;
+		max-width: 304px;
+	}
+	.reviews__before {
+		left: 30px;
+	}
+	.reviews__after {
+		right: 8px;
+	}
+	&__img {
+		height: 110px;
+		width: 110px;
+		img {
+			width: 100%;
+		}
+	}
+	&__name {
+		font-size: 21px;
+		margin-top: 11px;
+	}
+	&__city {
+		font-size: 17px;
+	}
+	&__logo {
+		max-height: 62px;
+	}
+	&__body {
+		height: 282px; 
+	}
+	&__title {
+		font-size: 18px;
+		padding: 0 4px;
+	}
+	&__text {
+		font-size: 15px;
+		padding: 0 16px;
+	}
+	&__btn {
+		height: 30px;
+		width: 30px;
+		bottom: -15px;
+	}
+	.slick-next {
+        right: -42px;
+		top: 258px;
+	}
+    .slick-prev {
+        left: -40px;
+		top: 246px;
+    }
+    .slick-dots {
+    	bottom: -32px;
+    }
+    
+  }
 }
 @media screen and (max-width: 1023px){
-
+	.reviews {
+		&__list {
+			max-width: 680px;
+			width: auto;
+			margin-top: 20px;
+		}
+		.slick-list {
+			max-width: 680px;
+		}
+		&__item {
+			margin-left: 20px;
+			margin-right: 20px;
+			// max-width: none;
+		}
+		&__name {
+			font-size: 20px;
+		}
+		.slick-dots button::before {
+			height: 10px;
+			width: 10px;
+	    }
+	    .slick-dots .slick-active button::before {
+			width: 20px;
+			height: 20px;
+			box-shadow: 0 0 12px rgba(36, 66, 137, 0.1);
+	    }
+	    .slick-dots .slick-active button::after {
+	    	width: 12px;
+	    	height: 12px;
+	    }
+	    .slick-next {
+	        right: -32px;
+			top: 258px;
+		}
+	    .slick-prev {
+	        left: -30px;
+			top: 246px;
+	    }
+	}
 }
 @media screen and (max-width: 767px){
-
+	.reviews {
+		&__list {
+			max-width: 400px;		
+		}
+		.slick-list {
+			width: auto;
+		}
+		&__item {
+			max-width: 400px;
+		}
+		&__text {
+			padding: 0 45px;
+		}
+	}
 }
 @media screen and (max-width: 479px){
-
+	.reviews {
+		&__list {
+			max-width: 310px;
+			margin-top: 0px;		
+		}
+		&__comparison {
+			margin-top: -132px;
+		}
+		&__img {
+			height: 80px;
+			width: 80px;
+			margin-top: -132px;
+		}
+		&__name {
+			font-size: 18px;
+		}
+		&__city {
+			font-size: 15px;
+		}
+		&__logo {
+			max-height: 55px;
+		}
+		&__title {
+			font-size: 16px;
+		}
+		&__text {
+			padding: 0 10px;
+			br {
+				display: none;
+			}
+		}
+		 .slick-next {
+	        right: 4px;
+			top: 158px;
+		}
+	    .slick-prev {
+	        left: 4px;
+			top: 146px;
+	    }
+	    .slick-dots {
+	    	bottom: -22px;
+	    }
+	}
 }
