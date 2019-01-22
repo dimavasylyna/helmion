@@ -60,6 +60,18 @@
 			transform: translateY(-50%);
 		}
 	}
+	@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+	 .header__nav-list {
+	 	justify-content: flex-start;
+	 	padding-left: 50px;
+	 }
+	 .header__nav-item:last-of-type {
+	 	margin-left: auto;
+	 }
+	 .header__logo-sign {
+	 	top: -40px;
+	 }
+	}
 	&__link {
 		position: relative;
 		font-size: 19px;
