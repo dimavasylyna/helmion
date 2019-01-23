@@ -85,12 +85,12 @@
     &::before {
         content: '';
         position: absolute;
-        top: -30px;
+        top: -11px;
         left: 50%;
-        transform: translateX(-50%) rotate(45deg);
+        transform: translateX(-50%) scaleY(0.64) rotate(45deg);
         display: block;
-        width: 40px;
-        height: 40px;
+        width: 22px;
+        height: 22px;
         background: #fff;
     }
 }
