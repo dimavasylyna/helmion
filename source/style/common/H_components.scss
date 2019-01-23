@@ -1,5 +1,131 @@
 .components {
-
+	padding-top: 84px;
+    padding-bottom: 78px;
+    background-image: url(../img/bg.jpg);
+    background-repeat: no-repeat;
+    background-position: 50% 0%;
+    .container {
+    	position: relative;
+    }
+    .subtitle {
+    	color: $text-gray;
+    	font-weight: 400;
+    }
+	&__prods {
+		position: absolute;
+		max-width: 434px;
+		z-index: 2;
+		width: 100%;
+		left: 50%;
+		top: 299px;
+		transform: translateX(-50%);
+		&::before {
+			content: '';
+			display: block;
+			position: absolute;
+			height:300px;
+			width: 300px;
+			background-color: #fff;
+			border-radius: 50%;
+			z-index: -1;
+			top: 30%;
+			left: 50%;
+			transform: translateX(-50%) translateY(-50%);
+		}
+		&::after {
+			content: '';
+		    position: absolute;
+	        top: -84px;
+		    left: 55px;
+		    z-index: -1;
+		    display: block;
+		    width: 256px;
+		    height: 183px;
+		    background: url(../img/about-stripes.png) 0 0 no-repeat;
+		    background-size: contain;
+		}
+		
+	}
+	&__prod-1 {
+		max-width: 427px;
+		height: auto;	
+	}
+	&__prod-2 {
+	    position: absolute;
+        right: -10px;
+	    bottom: -35px;
+	    height: auto;
+	    max-width: 212px;
+	}
+	&__list {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-around;
+		margin-top: 8px;
+		align-items: flex-end;
+	}
+	&__item {
+		max-width: 340px;
+		text-align: center;
+		margin-bottom: 13px;
+		&:nth-of-type(2n) {
+			margin-left: 423px;
+		}
+		&:nth-of-type(4) {
+			// align-self: flex-start;
+			// margin-top: -9px;
+		}
+		&:last-of-type {
+			margin-left: auto;
+			margin-right: auto;
+			margin-top: -141px;
+		}
+	}
+	&__img {
+		margin-bottom: 7px;
+		img {
+			display: block;
+			margin-left: auto;
+			margin-right: auto;
+		}
+	}
+	&__name {
+		font-size: 22px;
+		line-height: 1.1;
+		margin-top: 3px;
+		font-weight: 500;
+	}
+	&__desc {
+		font-size: 18px;
+		line-height: 1.45;
+		margin-top: 11px;
+		font-weight: 400px;
+		color: $text-gray;
+	}
+	&__conclusion {
+		font-size: 25px;
+	    line-height: 1.1;
+	    text-align: center;
+	    background-color: $bg-green;
+	    margin-top: 19px;
+    	padding: 37px 20px;
+	    font-weight: bold;
+	    color: #fff;
+	    position: relative;
+	    &::before {
+	    	content: '';
+		    display: block;
+		    position: absolute;
+		    height: 22px;
+		    width: 22px;
+		    background-image: url(../img/bg.jpg);
+		    background-repeat: no-repeat;
+		    background-position: 50% 0%;
+		    left: 50%;
+		    top: -11px;
+		    transform: translateX(-50%) scaleY(0.64) rotate(45deg);
+	    }
+	}
 }
 @media screen and (max-width: 1190px){
   
