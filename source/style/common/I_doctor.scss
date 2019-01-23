@@ -91,9 +91,14 @@
 	    max-height: 48px;
 	    max-width: none;
 	    position: absolute;
-	    z-index: 0;
-	   
+	    z-index: 0; 
 	}
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+	&__logo {
+		height: 48px!important;
+		max-height: auto;
+	}
+}
 	&__name {
 		font-size: 22px;
 		font-weight: 500;

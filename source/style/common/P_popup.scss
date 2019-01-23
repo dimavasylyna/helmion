@@ -22,6 +22,11 @@
 		left: 3px;
 		top: -3px;
 	}
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+	.popup__logo-sign {
+	 	top: -40px;
+	 }
+}
 	&__logo-text {
 		height: auto;
 		width: 154px;
