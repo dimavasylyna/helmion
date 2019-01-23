@@ -1,5 +1,106 @@
 .how-use {
-
+	padding-top: 84px;
+    padding-bottom: 78px;
+    background-image: url(../img/bg.jpg);
+    background-repeat: no-repeat;
+    background-position: 50% 103%;
+    &__list {
+    	display: flex;
+    	justify-content: space-between;
+    	margin-top: 63px;
+    	counter-reset: section;
+    }
+    &__item {
+    	max-width: 370px;
+    }
+    &__img {
+    	background-color: #fff;
+    	position: relative;
+    	width: 370px;
+    	min-height: 325px;
+    	border-radius: 5px;
+    	box-shadow: 0 0 15px rgba(36, 66, 137, 0.1);
+    	&::before {
+    		counter-increment: section;
+    		content: "" counter(section);
+    		display: flex;
+    		justify-content: center;
+    		align-items: center;
+    		position: absolute;
+    		font-size: 26px;
+    		font-weight: bold;
+    		color: #fff;
+    		height: 39px;
+    		width: 39px;
+    		border-radius: 50%;
+    		background-color: #199489;
+    		z-index: 2;
+    		box-shadow: 0 0 0 6px #bde6e2;
+    		left: 50%;
+    		top: -15px;
+    		transform: translateX(-50%);
+    	}
+    	&::after {
+    		content: '';
+    		display: block;
+    		position: absolute;
+    		background-color: #fbd010;
+    		left: 50%;
+    		bottom: -5px;
+    		height: 5px;
+    		width: 40px;
+    		transform: translateX(-50%);
+    	}
+    	img {
+    		position: absolute;
+    		height: auto;
+    		max-width: 372px;
+    		left: 50%;
+    		bottom: 0%;
+    		transform: translateX(-50%);
+    		border-radius: 5px;
+    	}
+    }
+	&__text {
+		font-size: 22px;
+		line-height: 1.3;
+		text-align: center;
+		font-weight: 500;
+		margin-top: 25px;
+	}
+	&__conclusion {
+		background-color: $bg-green;
+		color: #fff;
+		font-size: 27px;
+		line-height: 1.2;
+		font-weight: 400;
+		text-align: center;
+		padding: 34px 60px;
+		padding-bottom: 32px;
+		margin-top: 43px;
+		position: relative;
+		b {
+			font-size: 28px;
+			display: block;
+			margin-left: auto;
+			margin-right: auto;
+			font-weight: bold;
+			margin-bottom: 9px;
+		}
+		&::before {
+		    content: '';
+		    display: block;
+		    position: absolute;
+		    height: 22px;
+		    width: 22px;
+		    background-image: url(../img/bg.jpg);
+		    background-repeat: no-repeat;
+		    background-position: 50% 0%;
+		    left: 50%;
+		    top: -11px;
+		    transform: translateX(-50%) scaleY(0.64) rotate(45deg);
+		}
+	}
 }
 @media screen and (max-width: 1190px){
   
