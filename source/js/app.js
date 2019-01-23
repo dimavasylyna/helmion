@@ -344,5 +344,10 @@ $(function() {
     $('.reviews__list').on('afterChange', function(event, slick, currentSlide){
       $(this).find('.slick-slide').not('.slick-active').find('.open').removeClass('open');
     });
+
+    // doctor tabs
+    $('.doctor__tab-maria').on('click', function() {
+        $('.doctor__content-maria').addClass('active');
+    }); 
 });
 
