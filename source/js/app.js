@@ -346,8 +346,23 @@ $(function() {
     });
 
     // doctor tabs
+    var docContent = $('.doctor__content');
+    var docTab = $('.doctor__tab');
+    var delClass = function() {
+         docContent.removeClass('active');
+        docTab.removeClass('active');
+    }
+
     $('.doctor__tab-maria').on('click', function() {
+        delClass();
+        $(this).addClass('active');
         $('.doctor__content-maria').addClass('active');
-    }); 
+    });
+
+    $('.doctor__tab-dima').on('click', function() {
+        delClass();
+        $(this).addClass('active');
+        $('.doctor__content-dima').addClass('active');
+    });
 });
 

@@ -20,31 +20,39 @@
 		font-size: 22px;
 		cursor: pointer;
 		position: relative;
+		// transition: 0.3s;
 		&::after {
 				content: '';
-				display: none;
-				position: absolute;
-				height: 20px;
-				width: 20px;
-				background-color: inherit;
-				border: 3px solid #199589;
-				border-top: none;
-				border-left: none;
-				bottom: -2px;
-				left: 50%;
-				transform: translateY(50%) translateX(-50%) rotate(45deg);
+			    position: absolute;
+			    display: none;
+			    background-color: inherit;
+			    border-bottom: 4px solid #199589;
+			    border-right: 4px solid #199589;
+			    height: 18px;
+			    width: 18px;		
+			    transform:  scaleY(0.6) translateX(-50%) rotate(45deg) ;
+			    bottom: -13px;
+			    left: 50%;
 			}
 		&.active {
 			border: 3px solid #199589;
 			font-weight: 500;
+			transition: 0.3s;
 			&::after {
 				display: block;
+				 animation: doctor-active 0.4s 1;
 			}
 		}
 	}
 	&__content {
 		display: flex;
-		margin-top: 30px;
+		margin-top: 50px;
+		display: none;
+		justify-content: space-between;
+		&.active {
+			display: flex;
+
+		}
 	}
 	&__img {
 		background-color: #fff;
@@ -52,27 +60,54 @@
 		border-radius: 10px;
 		padding: 10px;
 		text-align: center;
+		margin: 0;
+		margin-right: 31px;
+		padding-bottom: 23px;
+		min-height: 583px;
 		img {
 			height: auto;
 			max-width: 350px;
 			border-radius: 6px;
+			display: block;
 		}
+	}
+	
+	&__caption {
+		margin-top: 0px;
+		position: relative;
+		padding-top: 40px;
+	}
+	&__logo {
+		display: block;
+	    margin-left: auto;
+	    margin-right: auto;
+	    left: 51%;
+	    top: 0;
+	    transform: translateX(-50%) rotate(-124deg);
+	    max-height: 48px;
+	    max-width: none;
+	    position: absolute;
+	    z-index: 0;
+	   
 	}
 	&__name {
 		font-size: 22px;
-		font-weight: 500px;
+		font-weight: 500;
+		margin-top: 3px;
 	}
 	&__who {
-		font-size: 18px;
+		font-size: 17px;
 		font-style: italic;
-		line-height: 1.2;
+		line-height: 22px;
 		color: #555;
+		margin-top: 6px;
+		padding: 0 20px;
 	}
 	&__text {
 		p {
-			margin-bottom: 30px;
+			margin-top: 26px;
 			font-size: 18px;
-			line-height: 1.45;
+			line-height: 26px;
 			color: $text-gray;
 		}
 		b {
@@ -84,8 +119,20 @@
 		display: inline-block;
 		font-weight: 500;
 		background-color: #ecf3f9;
-		padding: 22px;
+		padding: 22px 28px;
 		border-radius: 70px;
+		margin-bottom: 2px;
+		position: relative;
+		&::before {
+			content: '';
+			display: block;
+			position: absolute;
+			height: 5px;
+			width: 40px;
+			background-color: #fbd010;
+			top: 0;
+			left: 40px;
+		}
 	}
 }
 @media screen and (max-width: 1190px){
@@ -99,4 +146,12 @@
 }
 @media screen and (max-width: 479px){
 
+}
+
+@keyframes doctor-active {
+  0% {  
+    	transform: scaleY(0) translateX(-50%) rotate(45deg) ; 
+    	
+	}
+  	 
 }
