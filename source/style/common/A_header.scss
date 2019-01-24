@@ -191,7 +191,26 @@
 		font-weight: 500;
 		margin-left: 14px;
 		margin-top: 5px;
+		// box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+		filter: drop-shadow(0 0 6px rgba(0, 0, 0, 0.1));
+		position: relative;
+		&::before {
+			content: '';
+			display: block;
+			position: absolute;
+			height: 18px;
+			width: 18px;
+			background-color: inherit;
+			left: 3px;
+			top: 50%;
+			transform: translateX(-50%) translateY(-50%) rotate(45deg);
+		}
 	}
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+	&__age {
+		box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+	}
+}
 	.form {
 		margin-left: auto;
 		margin-bottom: 31px;
@@ -371,6 +390,11 @@
 		max-width: 454px;
 		font-size: 21px;
 		br {
+			display: none;
+		}
+	}
+	&__age {
+		&::before {
 			display: none;
 		}
 	}
