@@ -1,14 +1,25 @@
 section.header {
 
 }
+@media screen and (max-width: 1400px){
+	section.header {
+		padding-bottom: 40px;
+	}
+}
 @media screen and (max-width: 1190px){
-  
+	section.header {
+		margin-bottom: 0;
+	}
 }
 @media screen and (max-width: 1023px){
 
 }
 @media screen and (max-width: 767px){
-
+	section.header {
+		.form {
+			margin-bottom: 0;
+		}
+	}
 }
 @media screen and (max-width: 479px){
 

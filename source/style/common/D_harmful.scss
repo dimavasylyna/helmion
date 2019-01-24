@@ -58,10 +58,12 @@
 			background-color: #c0c2c2;
 			left: 5px;
 			bottom: -21px;
+			cursor: default;
 		}
 		&:hover {
 			.harmful__item-img {
 				box-shadow: 0 0 0 3px #fa7070;	
+				transition: 0.2s;
 			}
 			.harmful__mark {
 				display: block;
@@ -125,6 +127,7 @@
 		position: relative;
 		top: 2px;
 		z-index: 5;
+		transition: 0.2s;
 		img {
 			position: absolute;
 			left: 50%;
@@ -766,13 +769,11 @@
 
 @keyframes harmfulLine {
 	0% {
-		width: 0%;
-		height: 0%;
+		// width: 0%;
+		// height: 0%;
 		opacity: 0;
 	}
-	70% {
-		opacity: 1;
-	}
+
 }
 @keyframes hramfulMark {
 	0% {

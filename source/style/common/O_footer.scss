@@ -1,14 +1,65 @@
 .footer {
-
+	padding-top: 12px;
+	background-color: #fff;
+	padding-bottom: 50px;
+	color: #666;
+	font-size: 16px;
+	line-height: 24px;
+	.container {
+		display: flex;
+		justify-content: space-between;
+	}
+	&__company {
+	  display: flex;
+	  align-items: center;
+	}
+	&__logo {
+	  width: 55px;
+	  margin-right: 20px;
+	  margin-top: 0px;
+	}
+	&__info {
+	  line-height: 1.5;
+	  text-align: center;
+	}
+	&__link {
+	  display: block;
+	  color: #666;
+	  &:hover {
+	  	text-decoration: underline;
+	  }
+	}
+	&__code {
+	  text-align: right;
+	}
 }
 @media screen and (max-width: 1190px){
-  
+
 }
 @media screen and (max-width: 1023px){
 
 }
 @media screen and (max-width: 767px){
-
+	.footer {
+		.container {
+			flex-direction: column;
+			justify-content: center;
+		}
+		&__logo {
+			margin-left: auto;
+			margin-right: auto;
+			margin-bottom: 6px;
+		}
+		&__name {
+			display: none;
+		}
+		&__code {
+			display: none;
+		}
+		&__address {
+			display: none;
+		}
+	}
 }
 @media screen and (max-width: 479px){
 

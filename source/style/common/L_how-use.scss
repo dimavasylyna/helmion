@@ -12,11 +12,13 @@
     }
     &__item {
     	max-width: 370px;
+        width: 100%;
     }
     &__img {
     	background-color: #fff;
     	position: relative;
-    	width: 370px;
+    	max-width: 370px;
+        width: 100%;
     	min-height: 325px;
     	border-radius: 5px;
     	box-shadow: 0 0 15px rgba(36, 66, 137, 0.1);
@@ -55,6 +57,7 @@
     		position: absolute;
     		height: auto;
     		max-width: 372px;
+            width: 100%;
     		left: 50%;
     		bottom: 0%;
     		transform: translateX(-50%);
@@ -103,14 +106,107 @@
 	}
 }
 @media screen and (max-width: 1190px){
-  
+  .how-use {
+    &__list {
+        margin-top: 45px;
+    }
+    &__item {
+        max-width: 310px;
+    }
+    &__img {
+        min-height: 280px;
+    }
+    &__text {
+        font-size: 20px;
+        margin-top: 18px;
+        line-height: 1.2;
+    }
+    &__conclusion {
+        margin-top: 30px;
+        font-size: 24px;
+        line-height: 1.1;
+        padding: 26px 60px;
+        b {
+            font-size: 25px;
+            margin-bottom: 3px;
+        }
+    }
+  }
 }
 @media screen and (max-width: 1023px){
-
+    .how-use {
+        background-size: cover;
+        &__list {
+            margin-top: 35px;
+        }
+        &__item {
+            max-width: 240px;
+        }
+        &__img {
+            min-height: 220px;
+            &::before {
+                font-size: 24px;
+                height: 32px;
+                width: 32px;
+            }
+        }
+        &__text {
+            font-size: 18px;
+            line-height: 1.1;
+            margin-top: 15px;
+        }
+        &__conclusion {
+            margin-top: 25px;
+            padding: 14px 4px;
+            font-size: 21px;
+            line-height: 1;
+            b {
+                font-size: 22px;
+            }
+        }
+    }
 }
 @media screen and (max-width: 767px){
-
+    .how-use {
+        &__list {
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+        &__item {
+            max-width: 220px;
+            &:last-of-type {
+                margin-top: 28px;
+            }
+        }
+        &__img {
+            min-height: 198px;
+        }
+        &__text {
+            font-size: 17px;
+        }
+        &__conclusion {
+            margin-top: 18px;
+            font-size: 17px;
+            padding: 14px 10px;
+            b {
+                font-size: 19px;
+            }
+        }
+    }
 }
 @media screen and (max-width: 479px){
-
+    .how-use {
+        &__item {
+            &:nth-of-type(2) {
+                margin-top: 28px;
+            }
+        }
+        &__conclusion {
+            font-size: 15px;
+            padding: 14px 5px;
+            b {
+                font-size: 17px;
+            }
+        }
+    }
 }
