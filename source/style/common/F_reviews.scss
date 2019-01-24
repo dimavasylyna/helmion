@@ -107,12 +107,14 @@
 	}
 }
     &__body {
-    	height: 340px;
+    	max-height: 340px;
     	overflow: hidden;
     	margin-top: -15px;
     	margin-bottom: 33px;
+    	transition: 0.5s;
     	&.open {
-    		height: auto;
+    		max-height: 1500px;
+    		transition: 0.5s;
     	}
     }
     &__title {
@@ -310,7 +312,7 @@
 		max-height: 62px;
 	}
 	&__body {
-		height: 282px; 
+		max-height: 282px; 
 	}
 	&__title {
 		font-size: 18px;

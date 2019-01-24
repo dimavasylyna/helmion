@@ -26,6 +26,10 @@
 		position: absolute;
 		left: 3px;
 		top: -3px;
+		svg {
+			animation: logoRotate 1s 1;
+
+		}
 	}
 	&__logo-text {
 		height: auto;
@@ -688,3 +692,10 @@
   }
 }
 
+
+
+@keyframes logoRotate {
+	0% {
+		transform: rotate(-320deg);
+	}
+}

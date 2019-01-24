@@ -336,10 +336,22 @@ $('.reviews__list').slick({
 // reviews btn-more
 
 $(function() {
+    // smooth scroll
+    $('a').click( function(){ 
+        var scroll_el = $(this).attr('href'); 
+        if ($(scroll_el).length != 0) { 
+          $('html, body').animate({ scrollTop: $(scroll_el).offset().top + 10 }, 1000); 
+            }
+        return false; 
+    });
+
+    reviews
     $('.reviews__btn').on('click', function() {
         $(this).parent().find('.reviews__body').toggleClass('open');
         $(this).toggleClass('open');
     });
+
+    
     // видаляємо класи open при прокрутці слайду
     $('.reviews__list').on('afterChange', function(event, slick, currentSlide){
       $(this).find('.slick-slide').not('.slick-active').find('.open').removeClass('open');
