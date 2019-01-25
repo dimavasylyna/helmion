@@ -12,7 +12,7 @@
 }
 
 .about__list {
-   width: 385px;
+   width: 387px;
    padding-top: 38px;
 }
 
@@ -203,6 +203,11 @@
 
 
 @media screen and (max-width: 1190px){
+
+    .about__title {
+        max-width: 900px;
+        margin: 0 auto;
+    }
   
     .about__item {
         padding-left: 60px;
