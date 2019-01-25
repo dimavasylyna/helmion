@@ -18,7 +18,7 @@ function postDate() {
 
     var sa = body.getAttribute('data-post-format') || 'dd.mm.yyyy',
         msInDay = 86400000,
-        counterLength = 90,  // Максимальна кількість вімотаних днів. Змінюємо за необхідності.
+        counterLength = 370,  // Максимальна кількість вімотаних днів. Змінюємо за необхідності.
         months, 
         countryName = postLang ? postLang 
             : window.country_code ? window.country_code.toLowerCase() 
@@ -309,7 +309,7 @@ $('.reviews__list').slick({
             } 
         },
         {
-            breakpoint: 767,
+            breakpoint: 768,
             settings: {
               slidesToShow: 1
             } 
