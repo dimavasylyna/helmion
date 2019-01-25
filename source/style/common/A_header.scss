@@ -344,6 +344,12 @@
 }
 @media screen and (max-width: 1190px){
   .header {
+  	&__title {
+  		font-weight: 700;
+  		b {
+  			font-weight: 700;
+  		}
+  	}
   	&__top {
   		max-width: none;
   	}
@@ -542,6 +548,9 @@
   .header {
   	padding-top: 18px;
   	margin-bottom: 30px;
+  	&__subtitle {
+  		padding: 0 50px;
+  	}
 	&__logo {
 		display: none;
 	}
@@ -594,6 +603,7 @@
 	&__prod-2 {
 		max-width: 160px;
 		bottom: -20px;
+		right: 16px;
 	}
 	.form {
 		margin: 0;
@@ -626,6 +636,9 @@
 @media screen and (max-width: 479px){
   .header {
   	padding-top: 10px;
+  	&__subtitle {
+  		padding: 0 60px;
+  	}
   	&__nav {
   		width: auto;
   		margin-bottom: 0px;
