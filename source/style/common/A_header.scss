@@ -579,11 +579,17 @@
 		padding-top: 18px;
 	}
 	&__item {
-		padding-top: 34px;
+		padding-top: 0px;
+		padding-left: 40px;
+		text-align: left;
+		font-size: 17px;
 		&::before {
 			height: 28px;
 			width: 28px;
 			background-size: 70%;
+			left: 0;
+			top: 50%;
+			transform: translateY(-50%);
 		}
 	}
 	&__age {
