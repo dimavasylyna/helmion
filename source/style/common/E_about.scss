@@ -204,6 +204,10 @@
 
 @media screen and (max-width: 1190px){
 
+    .about__wrap {
+        margin-top: 25px;
+    }
+
     .about__title {
         max-width: 900px;
         margin: 0 auto;
@@ -246,7 +250,7 @@
 
     .about__wrap {
         flex-direction: column;
-        margin: 30px 0 50px;
+        margin: 20px 0 50px;
     }
 
     .about__list {
