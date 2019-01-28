@@ -203,13 +203,14 @@ input::-ms-clear {
 .price {
   margin-top: 10px;
   display: flex;
-  justify-content: flex-end;
-  padding-right: 8px;
+  justify-content: center;
+  
   &__old {
     font-weight: 400;
     display: flex;
     flex-direction: column;
-    margin-right: 19px;
+    // margin-right: auto;
+    margin-right: 10px;
     .price__title {
       font-size: 13px;
       color: #666;
@@ -243,12 +244,14 @@ input::-ms-clear {
     }
   }
   &__new {
+    margin-left: 10px;
     .price__title {
       font-size: 14px;
       color: #30302f;
       font-weight: 400;
       text-align: left;
       padding-left: 11px;
+      
     }
     .price__value {
       color: #000;
@@ -288,10 +291,12 @@ input::-ms-clear {
   align-items: center;
   justify-content: center;
   color: #000;
-  background: linear-gradient(to right, rgba(253,207,12,1) 0%,rgba(255,214,35,1) 50%,rgba(253,207,12,1) 100%);
+  background-color: rgba(253,207,12,1);
+  background-image: linear-gradient(to right, rgba(253,207,12,1) 0%,rgba(255,214,35,1) 50%,rgba(253,207,12,1) 100%);
+  
   outline: none;
   border: none;
-  box-shadow: 0 5px 0 #e5bc0c, 0px 21px 20px -13px rgba(197, 167, 37, 0.40);
+  box-shadow: 0 4px 0 #e5bc0c, 0px 21px 20px -13px rgba(197, 167, 37, 0.40), inset 0 -1px 0 #e5bc0d;
   border-radius: 5px;
   width: 100%;
   cursor: pointer;
@@ -305,8 +310,10 @@ input::-ms-clear {
     font-weight: 500;
   }
   &:hover {
+    background-color: rgba(253,207,12,1);
     background: linear-gradient(to right, rgba(252,186,12,1) 0%,rgba(255,214,35,1) 50%, rgba(252,186,12,1) 100%);
-    box-shadow: 0 5px 0 #e5bc0c, 0px 21px 20px -13px rgba(189, 139, 5, 0.48);
+   box-shadow: 0 4px 0 #e5bc0c, 0px 21px 20px -13px rgba(189, 139, 5, 0.48), inset 0 -1px 0 #e5bc0d;
+
   }
   &:active {
     transition: 0.1s;
