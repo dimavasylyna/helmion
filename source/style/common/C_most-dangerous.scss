@@ -1,13 +1,14 @@
 .most-dangerous {
-	background-image: url(../img/most-dangerous-bg.jpg);
+	background-image: url(../img/most-dangerous-bg.png);
 	background-repeat: no-repeat;
-	background-position: 50% 50%;
+	background-position: calc(60% + 350px) 50%;
 	color: #fff;
 	padding-top: 60px;
 	padding-bottom: 70px;
 }
 @media screen and (max-width: 1190px){
   .most-dangerous {
+  	background-position: calc(60% + 273px) 50%;
   	.title {
   		padding: 0 100px;
   	}
@@ -22,9 +23,12 @@
 }
 @media screen and (max-width: 767px){
  .most-dangerous {
- 	background-position: calc(50% + 200px) -24px;
+ 	background-position: calc(50% - 78px) -24px;
  }
 }
-@media screen and (max-width: 479px){
-
+@media screen and (min-width: 2000px){
+	.most-dangerous {
+		background-size: cover;
+		background-position: 50% 50%;
+	}
 }
