@@ -283,7 +283,7 @@
 		}
 		&__prods {
 			position: relative;
-			max-width: 434px;
+			max-width: 360px;
 			left: auto;
 			top: auto;
 			transform: none;
@@ -291,27 +291,27 @@
 			margin-right: auto;
 			margin-top: 150px;
 			&::before {
-				height:300px;
-				width: 300px;
+				height:280px;
+				width: 280px;
 			}
 			&::after {
-		        top: -84px;
-			    left: 55px;
-			    width: 256px;
-			    height: 183px;
+		        top: -64px;
+			    left: 13px;
+			    width: 226px;
+			    height: 158px;
 			}
 			
 		}
 		&__prod-1 {
-			max-width: 427px;
+			max-width: 330px;
 			height: auto;	
 		}
 		&__prod-2 {
 		    position: absolute;
 	        right: -10px;
-		    bottom: -35px;
+		    bottom: -15px;
 		    height: auto;
-		    max-width: 212px;
+		    max-width: 165px;
 		}
 		&__conclusion {
 			margin-top: 20px;

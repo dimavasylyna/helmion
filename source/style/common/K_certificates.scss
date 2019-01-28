@@ -27,8 +27,10 @@
 }
 @media screen and (max-width: 1190px){
   .certificates {
+  	
   	&__list {
   		margin-top: 22px;
+  		padding-bottom: 15px;
   	}
   	&__item {
   		width: 190px;
@@ -40,6 +42,11 @@
   }
 }
 @media screen and (max-width: 1023px){
+.certificates {
+  	&__list {
+		padding-bottom: 18px;
+  	}
+  }
 
 }
 @media screen and (max-width: 767px){
@@ -52,6 +59,7 @@
 		&__list {
 	  		margin-top: 20px;
 	  		flex-wrap: wrap;
+	  		padding-bottom: 16px;
 	  	}
 	  	&__item:last-of-type {
 	  		margin-top: 30px;
